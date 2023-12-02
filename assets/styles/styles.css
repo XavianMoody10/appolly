@@ -22,6 +22,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 .header__inner {
   width: 95%;
@@ -192,6 +193,149 @@ body {
   }
   .desktop-navigation {
     display: block;
+  }
+}
+.hero-section {
+  background-image: url("/assets/images/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 950px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  top: 40px;
+}
+
+.text-box {
+  width: 95%;
+  position: relative;
+}
+.text-box::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  right: 0;
+  bottom: 0;
+  border: 8px solid #7572ff;
+  width: 92%;
+  height: 107%;
+}
+.text-box__inner {
+  position: relative;
+  z-index: 2;
+  padding: 15px 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 290px;
+}
+.text-box__heading {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+.text-box__caption {
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+}
+
+.download-info {
+  margin-top: 10px;
+}
+.download-info__subheading {
+  font-size: 1rem;
+}
+.download-info__store-images {
+  margin-top: 15px;
+}
+
+@media (min-width: 640px) {
+  .hero-section {
+    height: 850px;
+  }
+  .hero-section__inner {
+    width: 90%;
+    max-width: 600px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .text-box__inner {
+    max-width: 330px;
+  }
+  .text-box__heading {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
+  .text-box__caption {
+    font-size: 0.8rem;
+  }
+  .text-box::after {
+    top: -30px;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    border: 13px solid #7572ff;
+    width: 90%;
+    max-width: 320px;
+    height: 110%;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-section {
+    height: 840px;
+  }
+  .hero-section__inner {
+    width: 95%;
+    max-width: 925px;
+    top: 50px;
+  }
+  .text-box__inner {
+    max-width: 470px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .text-box__heading {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
+  .text-box__caption {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    max-width: 400px;
+  }
+  .text-box::after {
+    top: -30px;
+    left: 30px;
+    right: 0;
+    bottom: 0;
+    border: 13px solid #7572ff;
+    width: 90%;
+    max-width: 450px;
+    height: 110%;
+  }
+  .download-info__subheading {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+  .download-info__store-images {
+    margin-top: 10px;
+  }
+  .download-info__store-image {
+    width: 120px;
+  }
+  .hero-image {
+    width: 280px;
+    position: absolute;
+    right: 70px;
   }
 }
 
